@@ -52,7 +52,7 @@ jobs:
           file: ./Dockerfile
           builder: ${{ steps.buildx.outputs.name }}
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/padoc-latex-cjk:latest,${{ secrets.DOCKER_HUB_USERNAME }}/padoc-latex-cjk:${{ github.event.release.tag_name }}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/pandoc-latex-cjk:latest,${{ secrets.DOCKER_HUB_USERNAME }}/pandoc-latex-cjk:${{ github.event.release.tag_name }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache
 
